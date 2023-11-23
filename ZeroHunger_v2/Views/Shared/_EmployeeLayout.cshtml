@@ -1,0 +1,46 @@
+﻿@{ Layout = null; }
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>_InnerLayout</title>
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            padding-top: 20px; 
+        }
+
+        .container {
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            margin-right: 10px; 
+        }
+
+    </style>
+
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="container">
+        <a class="btn btn-primary" href="/Employee/Dashboard">Home</a>
+        <a class="btn btn-primary" href="/Employee/Assignments">Task</a>
+        <a class="btn btn-primary" href="/Employee/History">History</a>
+        <a class="btn btn-danger" href="/Authorization/Login">Logout</a>
+    </div>
+
+    <div>
+        @RenderBody()
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

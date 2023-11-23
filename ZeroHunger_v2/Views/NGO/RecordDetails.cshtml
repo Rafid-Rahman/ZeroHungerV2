@@ -1,0 +1,96 @@
+﻿@{
+    ViewBag.Title = "RecordDetails";
+    Layout = "~/Views/Shared/_NGOLayout.cshtml";
+}
+
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+    body {
+        background-color: #f8f9fa; 
+    }
+
+    h1 {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    li {
+        margin-bottom: 10px;
+    }
+
+</style>
+
+<h1>Restaurant Details</h1>
+
+<ul>
+    <li>
+        Restaurant ID:
+        @Model.Request.Restaurant.RestaurantID
+    </li>
+    <li>
+        Restaurant Name:
+        @Model.Request.Restaurant.RestaurantName
+    </li>
+    <li>
+        Restaurant Location:
+        @Model.Request.Restaurant.RestaurantLocation
+    </li>
+    <li>
+        Contact Person:
+        @Model.Request.Restaurant.RestaurantContactPerson
+    </li>
+    <li>
+        Contact Number:
+        @Model.Request.Restaurant.RestaurantContactNumber
+    </li>
+    <li>
+        Email Address:
+        @Model.Request.Restaurant.RestaurantEmail
+    </li>
+    <li>
+        Food Details:
+        @Model.Request.FoodDetails
+    </li>
+</ul>
+
+<h1>Employee Details</h1>
+<ul>
+    <li>
+        Employee ID:
+        @Model.EmployeeID
+    </li>
+    <li>
+        Distributed By:
+        @Model.User.Name
+    </li>
+    <li>
+        Contact Number:
+        @Model.User.Phone
+    </li>
+    <li>
+        Email Address:
+        @Model.User.Email
+    </li>
+</ul>
+
+<h1>Timeline</h1>
+<ul>
+    <li>
+        Request Made At:
+        @Model.Request.RequestTime
+    </li>
+    <li>
+        Max Preservation Time Till:
+        @Model.Request.MaxPreservationTime
+    </li>
+    <li>
+        Distributed At:
+        @Model.DistributionTime
+    </li>
+</ul>

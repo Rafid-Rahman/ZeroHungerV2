@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "Dashboard";
+    Layout = "~/Views/Shared/_EmployeeLayout.cshtml";
+}
+
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+    body {
+        background-color: #f8f9fa; 
+    }
+
+    h2 {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .dashboard-welcome {
+        margin-top: 10px;
+        font-size: 18px;
+    }
+
+</style>
+
+<h2>Dashboard</h2>
+
+<div class="dashboard-welcome">
+    <span>Welcome @Session["username"]</span>
+</div>

@@ -1,0 +1,40 @@
+﻿@{ Layout = null; }
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>_InnerLayout</title>
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            padding-top: 20px; 
+        }
+
+        .btn {
+            margin-right: 10px; 
+        }
+    </style>
+
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div>
+        <a class="btn btn-primary" href="/Authorization/login">Login</a>
+        <a class="btn btn-primary" href="/Authorization/SignUP">Registration</a>
+        <a class="btn btn-success" href="/Authorization/DonorRegistration">Donor Registration</a>
+    </div>
+
+    <div>
+        @RenderBody()
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

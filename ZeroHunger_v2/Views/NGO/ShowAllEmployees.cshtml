@@ -1,0 +1,50 @@
+﻿@{
+    ViewBag.Title = "ShowAllEmployees";
+    Layout = "~/Views/Shared/_NGOLayout.cshtml";
+}
+
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+    body {
+        background-color: #f8f9fa; 
+    }
+
+    h2 {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    table {
+        margin-top: 20px;
+    }
+
+    th, td {
+        text-align: center;
+    }
+
+</style>
+
+<h2>ShowAllEmployees</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Contact Number</th>
+        <th>Email</th>
+        <th>Address</th>
+        <th>Status</th>
+    </tr>
+    @foreach (var us in Model)
+    {
+        <tr>
+            <td>@us.ID</td>
+            <td>@us.Name</td>
+            <td>@us.Phone</td>
+            <td>@us.Email</td>
+            <td>@us.Address</td>
+            <td>@us.Status</td>
+        </tr>
+    }
+</table>

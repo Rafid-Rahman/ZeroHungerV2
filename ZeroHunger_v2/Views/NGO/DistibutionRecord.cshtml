@@ -1,0 +1,48 @@
+﻿@{
+    ViewBag.Title = "DistributionRecord";
+    Layout = "~/Views/Shared/_NGOLayout.cshtml";
+}
+
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+    body {
+        background-color: #f8f9fa; 
+    }
+
+    h2 {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    table {
+        margin-top: 20px;
+    }
+
+    th, td {
+        text-align: center;
+    }
+
+</style>
+
+<h2>DistributionRecord</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>Request ID</th>
+        <th>Restaurant Name</th>
+        <th>Status</th>
+        <th>Distributed by</th>
+        <th>Action</th>
+    </tr>
+    @foreach (var dr in Model)
+    {
+        <tr>
+            <td>@dr.Request.RequestID</td>
+            <td>@dr.Request.Restaurant.RestaurantName</td>
+            <td>@dr.Status</td>
+            <td>@dr.User.Name</td>
+            <td><a href="/NGO/recorddetails/@dr.RecordID" class="btn btn-primary">Details</a></td>
+        </tr>
+    }
+</table>

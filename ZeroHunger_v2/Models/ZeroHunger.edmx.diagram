@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="b2d56afa754a4f97851193c3247d50fa" Name="Diagram1" ZoomLevel="73" >
+        <EntityTypeShape EntityType="ZeroHunger.Assignment" Width="1.5" PointX="7.5" PointY="7.5" />
+        <EntityTypeShape EntityType="ZeroHunger.DistributionRecord" Width="1.5" PointX="10.5" PointY="7.5" />
+        <EntityTypeShape EntityType="ZeroHunger.Request" Width="1.5" PointX="5.25" PointY="10.625" />
+        <EntityTypeShape EntityType="ZeroHunger.Restaurant" Width="1.5" PointX="3" PointY="10.625" />
+        <EntityTypeShape EntityType="ZeroHunger.User" Width="1.5" PointX="0.75" PointY="4.125" />
+        <AssociationConnector Association="ZeroHunger.FK__Assignmen__Emplo__1920BF5C" />
+        <AssociationConnector Association="ZeroHunger.FK__Assignmen__Reque__182C9B23" />
+        <AssociationConnector Association="ZeroHunger.FK__Distribut__Emplo__1CF15040" />
+        <AssociationConnector Association="ZeroHunger.FK__Distribut__Reque__1BFD2C07" />
+        <AssociationConnector Association="ZeroHunger.FK__Requests__Restau__15502E78" />
+        <AssociationConnector Association="ZeroHunger.FK__Restauran__Resta__1273C1CD" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

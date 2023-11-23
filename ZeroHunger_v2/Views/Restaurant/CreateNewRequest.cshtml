@@ -1,0 +1,59 @@
+﻿@{ ViewBag.Title = "CreateNewRequest";
+    Layout = "~/Views/Shared/_RestaurantLayout.cshtml"; }
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Create New Request</title>
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #f8f9fa; 
+            padding: 20px;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        label {
+            margin-top: 10px;
+            display: block;
+        }
+
+        input.form-control {
+            margin-bottom: 10px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h2>Create New Request</h2>
+
+    <form action="" method="post">
+        <input type="hidden" name="RestaurantID" class="form-control" value="@Session["restaurantid"]" />
+        <input type="hidden" name="RequestTime" class="form-control" value="@DateTime.Now" />
+
+        <label for="MaxPreservationTime">Max Preservation Time:</label>
+        <input type="datetime-local" name="MaxPreservationTime" value="@DateTime.Now" class="form-control" />
+        <span class="text-danger"><i>@Html.ValidationMessage("MaxPreservationTime")</i></span>
+
+        <label for="FoodDetails">Food Details:</label>
+        <input type="text" name="FoodDetails" class="form-control" />
+
+        <input type="hidden" name="Status" class="form-control" value="Requested" />
+
+        <input type="submit" name="submit" class="btn btn-success" value="Add" />
+    </form>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>
